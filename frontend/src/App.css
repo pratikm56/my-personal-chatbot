@@ -5,7 +5,9 @@ body {
   background: linear-gradient(-45deg, #253e84, #002d46, #203f4f, #295879);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
+  width: 100vw;
   height: 100vh;
+  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,8 +23,10 @@ body {
 /* THE MAIN GLASS CONTAINER */
 .portfolio-container {
   display: flex;
-  width: 950px;
-  height: 85vh;
+  width: 95vw;
+  height: 95vh;
+  margin: 2.5vh auto;
+  box-sizing: border-box;
   /* Glass effect magic */
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
