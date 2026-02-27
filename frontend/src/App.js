@@ -28,7 +28,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await axios.post('http://localhost:5000/api/chat', {
+      const response = await axios.post('https://my-personal-chatbot-d7xz.onrender.com/', {
         message: userMessage.text
       });
 
