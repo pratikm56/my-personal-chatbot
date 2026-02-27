@@ -6,8 +6,8 @@ const { Groq } = require('groq-sdk');
 const app = express();
 const port = process.env.PORT || 5000;
 
-// Allow requests from your local React app (we will update this for Vercel later)
-app.use(cors({ origin: 'http://localhost:3000' }));
+//updated to allow all origins for development purposes. In production, consider restricting this to specific domains.
+app.use(cors({ origin: '*' }));
 app.use(express.json());
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
