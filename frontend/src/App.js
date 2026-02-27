@@ -2,8 +2,14 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import './App.css';
 import  profilePic from './profile.png';
+import { useEffect,useRef } from 'react';
 
 function App() {
+  const bottomRef = useRef(null);
+  useEffect(() => {
+    bottomRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages]);
+
   const [input, setInput] = useState('');
   const [messages, setMessages] = useState([
     { text: "Hi! I'm Pratik's AI assistant. Ask me anything about his skills, education, or projects!", isBot: true }
@@ -94,6 +100,7 @@ function App() {
             </div>
           ))}
           {isLoading && <div className="message bot-message">Typing...</div>}
+          <div ref={bottomRef} />
         </div>
 
         <div className="chat-input-area">
