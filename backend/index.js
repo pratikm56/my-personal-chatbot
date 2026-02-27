@@ -8,6 +8,12 @@ const port = process.env.PORT || 5000;
 
 //updated to allow all origins for development purposes. In production, consider restricting this to specific domains.
 app.use(cors({ origin: '*' }));
+
+// Root route for UptimeRobot to ping
+app.get('/', (req, res) => {
+    res.status(200).send("Pratik's AI Backend is awake and running!");
+});
+
 app.use(express.json());
 
 const groq = new Groq({ apiKey: process.env.GROQ_API_KEY });
