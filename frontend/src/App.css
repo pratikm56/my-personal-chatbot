@@ -1,13 +1,12 @@
 body {
   margin: 0;
+  padding: 0;
   font-family: 'Inter', 'Segoe UI', Tahoma, sans-serif;
   /* Upgraded background for better glass contrast */
   background: linear-gradient(-45deg, #253e84, #002d46, #203f4f, #295879);
   background-size: 400% 400%;
   animation: gradientBG 15s ease infinite;
-  width: 100vw;
   height: 100vh;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,10 +22,11 @@ body {
 /* THE MAIN GLASS CONTAINER */
 .portfolio-container {
   display: flex;
-  width: 95vw;
-  height: 95vh;
-  margin: 2.5vh auto;
+  width: 95%;
+  height: 95dvh;
+  margin: 2.5dvh auto;
   box-sizing: border-box;
+  max-width: 1400px;
   /* Glass effect magic */
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
@@ -34,7 +34,6 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.15);
   border-radius: 24px;
   box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
-  overflow: hidden;
 }
 
 /* LEFT SIDEBAR */
@@ -254,10 +253,11 @@ body {
   
   /* Make the main glass box take up the whole screen width */
   .chat-container {
-    width: 95vw !important; 
-    height: 90vh none !important;
-    margin: auto;
-    max-width: none !important;
+    flex-direction: column;
+    width: 98%; 
+    height: 95dvh;
+    margin: 1dvh auto;
+    padding: 15px;
     border-radius: 15px; /* Slightly smaller corners for mobile */
   }
 
